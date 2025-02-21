@@ -22,6 +22,12 @@ require([
     longitude: -3.7
   }
 
+  const puntoFinal = {
+    type: 'point',
+    latitude: 40.41,
+    longitude: -3.5
+  }
+
   let pointSymbol = {
     type: 'simple-marker',
     color: [226, 119, 40],
@@ -48,7 +54,7 @@ require([
   mapa.add(capaGraficaResultado)
 
   const token =
-    'mzFcMRqhxzPAoRJavp2MJmJUcadbCVil_E77hNco2FGkYUWA9wkSe_yRelR23SoXrJUgTc8c00-OLTYj-jgq-mxq6cjCpJ4a6JTygwN-fUu5IzczvXsQckOALZALaqCUYrXrqsVysYKbe-V5FUuk1hXFnoJZgNfjPG-x6SdqTxZQqijHa7uAJDWwydBcgG7F'
+    'mzFcMRqhxzPAoRJavp2MJmJUcadbCVil_E77hNco2FGkYUWA9wkSe_yRelR23SoXrJUgTc8c00-OLTYj-jgq-rnZ-PsPMfF1ZW_Qda-axsY3Z9Gql6sJc54YyjDT4iOYJJ6ahOzyaRUv4Y6ENH-8TFRO1UbH1Lp2CfyyXKm1vrYxNadR6hTYxibA5kF4-wdY'
 
   fetch(
     `https://route-api.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World/solve?token=${token}&f=pjson&stops=-3.7,40.40;-3.5,40.41&findBestSequence=false`

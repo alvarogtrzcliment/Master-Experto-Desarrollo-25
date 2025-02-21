@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "4e794c50-6dbb-4b75-840d-f18deb862b45",
+		"name": "API - App Árboles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39395513"
+	},
+	"item": [
+		{
+			"name": "Arboles",
+			"item": [
+				{
+					"name": "Arboles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/arboles",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"arboles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Arbol ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/arboles/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"arboles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Arbol",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"let altura = pm.environment.replaceIn(\"{{$randomInt}}\")\r",
+									"let diametro = pm.environment.replaceIn(\"{{$randomInt}}\")\r",
+									"let longitud = pm.environment.replaceIn(\"{{$randomLongitude}}\")\r",
+									"let latitud = pm.environment.replaceIn(\"{{$randomLatitude}}\")\r",
+									"\r",
+									"pm.environment.set(\"altura\",altura)\r",
+									"pm.environment.set(\"diametro\",diametro)\r",
+									"pm.environment.set(\"longitud\",longitud)\r",
+									"pm.environment.set(\"latitud\",latitud)\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"especie\":\"{{especie}}\",\r\n    \"altura\":\"{{altura}}\",\r\n    \"diametro\":\"{{diametro}}\",\r\n    \"longitud\":\"{{longitud}}\",\r\n    \"latitud\":\"{{latitud}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/arboles",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"arboles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
