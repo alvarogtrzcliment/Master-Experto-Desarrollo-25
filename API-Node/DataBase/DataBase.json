@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "especie": "Pinus nigra",
+    "altura": 22,
+    "diametro": 30,
+    "longitud": -3.71,
+    "latitud": 40.4
+  },
+  {
+    "id": 1,
+    "especie": "Pinus nigra",
+    "altura": 23,
+    "diametro": 27,
+    "longitud": -3.72,
+    "latitud": 40.42
+  },
+  {
+    "id": 2,
+    "especie": "Pinus nigra",
+    "altura": 28,
+    "diametro": 25,
+    "longitud": -3.73,
+    "latitud": 40.42
+  },
+  {
+    "id": 3,
+    "especie": "Pinus nigra",
+    "altura": 28,
+    "diametro": 25,
+    "longitud": -3.75,
+    "latitud": 40.43
+  }
+]
